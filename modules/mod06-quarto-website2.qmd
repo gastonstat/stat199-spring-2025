@@ -1,0 +1,88 @@
+---
+title: "6) Quarto Websites II"
+---
+
+In this module we continue describing more elements and uses of Quarto websites.
+
+
+## Creating a Personal Website
+
+Reminder: documentation about Quarto Websites is available in the followin link
+
+<https://quarto.org/docs/websites/>
+
+I want authors to have their own personal website. One option to have this 
+type of website is by using a Quarto Website. To be more precise: it would be
+nice to have a so-called __personal landing page__.
+
+
+### Content
+
+The content of a personal website does not have to be extensive. In fact, it
+can be composed by a top navigation (`navbar`) menu with tabs:
+
+- Home
+- Resume
+- About
+
+
+#### Home
+
+This is the landing page. It is a welcome page to tell the audience who you 
+are, and what you do. I recommend using this page as the gallery to your 
+personal portfolio of projects or creations.
+
+
+#### Resume
+
+You can have a dedicated tab for your resume, and possibly link it to your
+LinkedIn profile.
+
+
+#### About
+
+This is a customary element of personal websites, in which you have a "Bio"
+page or more information about your career, interests, hobbies, etc.
+
+
+
+## Activities
+
+- Create a Quarto Website for your Personal Website
+- Show dummy version
+- Add a photo to your landing page
+- List some projects or ideas for your portfolio
+- Draft your resume in the Resume page
+- Draft content for your About page
+
+
+Example of `_quarto.yaml` config file for a personal website:
+
+```yaml
+project:
+  type: website
+
+website:
+  title: "First Last"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - resume.qmd
+
+format:
+  html:
+    theme: zephyr
+    fontsize: 1em
+    css: styles.css
+    toc: true
+```
+
+
+Sample mock-up personal website:
+
+- Demo: <https://dataviz.quarto.pub/me/>
+
+- Code: <https://github.com/gastonstat/quarto-pub-me/tree/main>
+

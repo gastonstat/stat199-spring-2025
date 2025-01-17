@@ -1,0 +1,106 @@
+---
+title: "Motivation"
+format:
+  html:
+    toc-depth: 2
+---
+
+If you've been following the news about the so-called __hurricane season__ over 
+the last 10 years or so, chances are you've encountered headlines about some 
+years being labeled as "above-average seasons", or "hurricanes becoming stronger", 
+or even "the need to add a category 6 to the Saffir-Simpson wind scale".
+
+Below is a small sample of headlines about hurricanes (mostly from the 2024
+season) that can serve as motivation for our STAT 199 study this semester.
+
+\
+
+
+## News Headlines
+
+
+### How climate change is worsening hurricanes
+
+(The daily, Case Western Reserve University)
+
+> As climate change accelerates, hurricanes are becoming more intense and 
+> destructive, bringing heavier rains, stronger winds and devastating storm surges. 
+
+<a href="https://thedaily.case.edu/how-climate-change-is-powering-stronger-hurricanes" target="_blank">https://thedaily.case.edu/how-climate-change-is-powering-stronger-hurricanes</a>
+
+\
+
+### Hurricanes are becoming so strong a new category may be needed, study says
+
+(World Economic Forum)
+
+> Hurricanes may become less frequent but more intense, prompting debate on the 
+> need to add a Category 6 to the Saffir-Simpson scale. Researchers are proposing 
+> a Category 6 for winds exceeding 309 km/h, citing 5 storms in this rage since 2013.
+
+<a href="https://www.weforum.org/stories/2024/02/hurricanes-becoming-strong-new-category-6-needed" target="_blank">https://www.weforum.org/stories/2024/02/hurricanes-becoming-strong-new-category-6-needed</a>
+
+
+\
+
+### Climate change is making hurricanes stronger. But it's unclear if it's resulting in more of them
+
+(World Economic Forum)
+
+> Researchers now expect more hurricanes to become major storms. But it is 
+> unclear how climate change may influence the total number of hurricanes emerging.
+
+<a href="https://www.weforum.org/stories/2022/10/climate-change-impact-tropical-storms" target="_blank">https://www.weforum.org/stories/2022/10/climate-change-impact-tropical-storms</a>
+
+\
+
+### Dangerous hurricanes are being made even worse because of climate change, study finds
+
+(ABC News)
+
+> A vast majority of hurricanes between 2019 and 2023 measured stronger winds. 
+> According to a study from Climate Central, 84% of Atlantic hurricanes between 
+> 2019 and 2023 were, on average, 18 mph stronger because of climate change.
+
+<a href="https://abcnews.go.com/US/dangerous-hurricanes-made-worse-climate-change-study-finds/story?id=116049116" target="_blank">https://abcnews.go.com/US/dangerous-hurricanes-made-worse-climate-change-study-finds/story?id=116049116</a>
+
+\
+
+### How unusual has this hurricane season (2024) been?
+
+(BBC)
+
+> In less than two weeks, five hurricanes formed, which is not far off what the 
+> Atlantic would typically get in an entire year.
+
+<a href="https://www.bbc.com/news/articles/cden551l7kko" target="_blank">https://www.bbc.com/news/articles/cden551l7kko</a>
+
+::: {layout-ncol=2}
+
+![](https://ichef.bbci.co.uk/news/800/cpsprodpb/a889/live/b01566a0-87ce-11ef-b6b0-c9af5f7f16e4.png.webp){width=40%}
+
+![](https://ichef.bbci.co.uk/news/800/cpsprodpb/7666/live/b209c720-87cf-11ef-8936-1185f9e7d044.png.webp){width=40%}
+
+:::
+
+
+::: {layout-ncol=2}
+
+![](https://ichef.bbci.co.uk/news/800/cpsprodpb/3c8b/live/4e387e80-87cf-11ef-8936-1185f9e7d044.png.webp){width=40%}
+
+:::
+
+\
+
+### Are hurricanes getting worse? Here's what you need to know
+
+(Oregon Public Broadcasting)
+
+> Climate change has not led to an increase in the total number of hurricanes 
+> hitting the U.S. each year. But the storms that do form are more likely to 
+> become more intense, with higher wind speeds, heavier rainfall, and more 
+> severe storm surge.
+
+<a href="https://www.opb.org/article/2024/10/08/climate-change-hurricanes-worse/" target="_blank">Are hurricanes getting worse? Here's what you need to know</a>
+
+

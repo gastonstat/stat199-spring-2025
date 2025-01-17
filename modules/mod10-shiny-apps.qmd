@@ -1,0 +1,25 @@
+---
+title: "10) Shiny Apps"
+---
+
+Another interesting product to be developed for this project is one or more
+shiny apps.
+
+
+## Ideas
+
+Shiny app to visualize the storm tracks
+
+For instance, say we focus on a particular basin (e.g. North Atlantic):
+
+- widget to choose Season (i.e. Year)
+
+- widget to filter certain category levels (e.g. depressions, storms, hurricanes, etc)
+
+- widget to highlight the track sections above a certain wind speed
+
+- widget to filter month
+
+- widget to increase size of points or width of line based on wind speed
+
+

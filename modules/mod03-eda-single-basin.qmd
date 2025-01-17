@@ -1,0 +1,95 @@
+---
+title: "3) EDA Single Basin"
+---
+
+This module involves a first exploratory analysis of a single basin, e.g. 
+North Atlantic (NA) or East Pacific (EP).
+
+The idea is to have a first contact with the data, namely:
+
+- Import data in R
+- Import data: only a specific set of columns
+- Make sure the data documentation makes sense
+    + Are there any discrepancies/inconsistencies between the imported data and
+    the codebook?
+- In terms of "time", what years are available in the data?
+- We plan to focus our analysis since 1980 to present, but should we include other years prior to 1980?
+- What are the different types (or classes) of tropical cyclones (terminology):
+    + disturbances
+    + depressions
+    + tropical storms
+    + subtropical storms
+    + hurricanes (categories 1-5)
+    + tropical cyclones
+    + subtropical cyclones
+    + extratropical cyclones
+    
+
+## What to Analyze?
+
+Here are some ideas:
+
+- Start with a given basin, e.g. North Atlantic
+- Choose one or two years (or a handful of years?)
+  + What might be the most reasonable "oldest" year to work with (e.g. 1950, 1975, 1980)? 
+- Perform a univariate exploratory analysis of the following columns (colums 1-16):
+
+    ```
+      "SID"
+      "SEASON"
+      "NUMBER"
+      "BASIN"
+      "SUBBASIN"
+      "NAME"
+      "ISO_TIME"
+      "NATURE"
+      "LAT"
+      "LON"
+      "WMO_WIND"
+      "WMO_PRES"
+      "WMO_AGENCY"
+      "TRACK_TYPE"
+      "DIST2LAND"
+      "LANDFALL"
+    ```
+
+- Should we derive other variables? (We may need to use `"lubridate"` package)
+  + `MONTH`: extract month from `ISO_TIME`
+  + `DAY`: extract day from `ISO_TIME`
+  + `HOUR`: extract hour from `ISO_TIME`
+  + `DURATION`: compute (or summarize) duration of a storm
+  + `WIND_KPH`: wind in kilometers-per-hour
+  + `CATEGORY`: mutate a category column based on `WIND` speed (category values e.g. -1, 0, 1, 2, 3, 4, 5)
+  + etc
+  
+- Should we be concerned about missing values?
+
+- What cyclones have names? Is naming consistent with wind scale (i.e. a cyclone is given a name once it reaches "tropical storm" status)?
+
+
+
+## Counting Storm Ideas
+
+After getting some degree of familiarity with the data, the next step could 
+involve computing distributions (i.e. counting) of the following:
+
+- distribution of Named Storms (e.g. in the North Atlantic, per year),
+
+- distribution of Hurricanes (e.g. in the North Atlantic, per year), 
+
+- distribution of Major Hurricanes (e.g. in the North Atlantic, per year),
+
+__Example 1__: The idea would be to obtain counts more or less similar to the 
+graphic displayed in the figure __Atlantic Basin Storm Count__; see 
+_Tropical Cyclone Climatology_ webpage <a href="https://www.nhc.noaa.gov/climo/" target="_blank">https://www.nhc.noaa.gov/climo/</a>
+
+
+![](images/atlantic-storm-count.jpg)
+
+\
+
+__Example 2:__ Another storm count graphic is the one from the BCC article 
+_"How unusual has this hurricanes (2024) been?"_; see <a href="https://www.bbc.com/news/articles/cden551l7kko" target="_blank">https://www.bbc.com/news/articles/cden551l7kko</a>
+
+![](images/atlantic-named-storms-1990-2024.png)
+

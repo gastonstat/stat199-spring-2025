@@ -1,0 +1,9 @@
+---
+title: "8) Closeread Docs II"
+---
+
+In this module we continue our discussion around Closeread documents.
+
+This time, we'll focus on how to tell a story based on tropical cyclones, 
+which involves using R code, some graphics, and going through the design
+process of a scrollytelling document.

@@ -1,0 +1,30 @@
+---
+title: "Supervised Independent Study and Research"
+subtitle: "STAT 199, Spring 2025"
+---
+
+This is the companion website for __STAT 199 Supervised Independent Study and Research__ (Spring 2025) under the supervision of <a href="https://www.gastonsanchez.com" target="_blank">Gaston Sanchez</a>, at UC Berkeley.
+
+\
+
+## Spring 2025 Calendar
+
+Tentative calendar subject to change.
+
+| Date    | Session                                                         | Logs |
+|---------|-----------------------------------------------------------------|----------|
+|  1/29   | [1) Introduction](modules/mod01-introduction.html)              | log 1    |
+|  2/05   | [2) IBTrACS Data](modules/mod02-data.html)                      | log 2    |
+|  2/12   | [3) EDA Single Basin](modules/mod03-eda-single-basin.html)      | log 3    |
+|  2/19   | [4) Mapping Storm Tracks](modules/mod04-mapping-tracks)         | log 4    |
+|  2/26   | [5) Quarto Websites I](modules/mod05-quarto-website1.html)      | log 5    |
+|  3/05   | [6) Quarto Websites II](modules/mod06-quarto-website2.html)     | log 6    |
+|  3/12   | [7) Closeread Documents I](modules/mod07-closeread-docs1.html)  | log 7    |
+|  3/19   | [8) Closeread Documents II](modules/mod08-closeread-docs2.html) | log 8    |
+|  3/26   | _Spring Recess_ | | 
+|  4/02   | 9) Animations              | log 9    |
+|  4/09   | 10) Shiny App       | log 10   |
+|  4/16   | 11) TBA             | log 11   |
+|  4/23   | 12) TBA             | log 12   |
+
+

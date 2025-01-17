@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  favicon: assets/favicon.ico
+  title: "stat199-spring-2025"
+  sidebar:
+    title: "<small>STAT 199, Sp-2025<br> Tropical Cyclones</small>"
+    logo: "assets/hurricanes.jpeg"
+    style: floating
+    contents:
+      - href: index.qmd
+        text: Home
+      - section: "Modules"
+        contents: 
+        - modules/mod00-motivation.qmd
+        - modules/mod01-introduction.qmd
+        - modules/mod02-data.qmd
+        - modules/mod03-eda-single-basin.qmd
+        - modules/mod04-mapping-tracks.qmd
+        - modules/mod05-quarto-website1.qmd
+        - modules/mod06-quarto-website2.qmd
+        - modules/mod07-closeread-docs1.qmd
+        - modules/mod08-closeread-docs2.qmd
+      - about.qmd
+
+format:
+  html:
+    theme: lumen
+    fontsize: 1em
+    css: styles.css
+    toc: true
+
+
+

@@ -1,0 +1,68 @@
+---
+title: "About"
+subtitle: "STAT 199, Spring 2025"
+---
+
+
+## About STAT 199
+
+Like many other departments, the <a href="https://statistics.berkeley.edu/academics/undergrad/research" target="_blank">Department of Statistics</a> at UC Berkeley offers different special course types for students to earn credit for participating in research. These include STAT 197 and STAT 199, and courses specific to the Honors Program.
+
+In particular, STAT 199 courses provide students with the opportunity to 
+do independent study and research supervised by a faculty sponsor.
+
+This website is maintained by me, <a href="https://www.gastonsanchez.com" target="_blank">Gaston Sanchez</a>, to keep track of my sponsored
+STAT 199 course during the Spring 2025 semester.
+
+::: {.callout-warning icon=false}
+## Course Info
+
+__Supervisor__: Gaston Sanchez
+
+__Code #__: TBD
+
+__Units__: 2
+
+__Dates__: Tentative Jan-23 / May-07
+:::
+
+
+
+
+## Description
+
+This research project is a Data Analysis Project of Tropical Cyclones.
+
+Our aim is to carry out an exploratory analysis of tropical cyclones in some 
+of the Ocean basins around the world. 
+
+We expect to produce and share the work done in this project through the 
+publication of (ideally):
+
+1) Main website.
+
+2) Shiny web app(s).
+
+
+
+## Desiderata
+
+Some of the things that---time permitting---would be nice to analyze, visualize, describe:
+
+- Distribution of Named Storms, Hurricanes, and Major Hurricanes in the North Atlantic, per year.
+
+- Visualize storm tracks in the North Atlantic and East Pacific in the last 45+ years
+
+    + Broken down by month
+    + Taken into account wind speed
+    + Considering points of origin
+    + Using static plots (ggplot, sf)
+    + Using web-interactive plots (leaflet)
+    + Using animated plots (gganimate)
+    
+- Visualize points of origin and tracks for:
+    
+    + named storms
+    + hurricanes
+    + major hurricanes
+

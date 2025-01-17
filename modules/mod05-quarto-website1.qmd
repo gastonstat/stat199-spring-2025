@@ -1,0 +1,154 @@
+---
+title: "5) Quarto Websites I"
+---
+
+To report and communicate the work done in this project, we'll use a website created with <a href="https://quarto.org/docs/websites/" target="_blank">Quarto Websites</a>, and published to <a href="https://quartopub.com/" target="_blank">Quarto Pub</a>.
+
+The goal of this module is to provide a brief introduction to Quarto Websites. More specifically, the idea is to:
+
+- Create and edit a couple of basic demo websites, 
+- Get familiar with the main files of a Quarto website, e.g. `_quarto.yml`, `index.qmd`, etc
+- Inspect the structure and syntax of the configuration file: `_quarto.yml` config file
+- Understand the various navigation options available in Quarto websites:
+    + top navigation with a `navbar`
+    + side navigation with a `sidebar`
+    + combine top and side navigation
+
+
+\
+
+
+## Creating a Quarto Website
+
+Quarto Websites are a convenient way to publish the work done in this project.
+
+<https://quarto.org/docs/websites/>
+
+
+### Quick Start
+
+To create the website we'll use a website project within RStudio. Follow the
+Quick Start below to read about this topic.
+
+<https://quarto.org/docs/websites/#quick-start>
+
+
+### Main Workflow
+
+1) Create a Quarto website (through an RStudio project)
+
+2) Edit the website
+
+    - add files
+    - edit content of files
+    - handle the file structure of the website
+
+3) Preview and/or Render the website
+
+4) Optional: Publish the website
+
+5) Repeat steps 2-4 as necessary
+
+
+#### Website Preview
+
+To preview a website, use the `quarto preview` command, which 
+will render and run the website into in your browser or in an embedded window.
+
+```{.markdown filename="Terminal"}
+# preview the website in the project directory
+quarto preview
+```
+
+
+
+#### Website Render
+
+To render (but not preview) a website, use the `quarto render` command, which 
+will render the website into the `_site` directory by default:
+
+```{.markdown filename="Terminal"}
+# render the website in the project directory
+quarto render
+```
+
+
+\
+
+
+## Website Navigation
+
+To learn about the various ways to add navigation to a website, including top-level navigation bars, sidebars, or hybrid designs that uses both, see the following link:
+
+<https://quarto.org/docs/websites/website-navigation.html>
+
+
+### Top Navigation
+
+You can use a top navigation (a navbar) with optional sub-menus.
+
+<https://quarto.org/docs/websites/website-navigation.html#top-navigation>
+
+To add top-navigation to a website, add a `navbar` entry to the website config in 
+`_quarto.yml`. For example, the following YAML:
+
+```yaml
+website:
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - talks.qmd
+      - about.qmd 
+```
+
+
+### Side Navigation
+
+If your site consists of more than a handful of documents, you might prefer to use side navigation, which enables you to display an arbitrarily deep hierarchy of articles.
+
+```yaml
+website:
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Introduction"
+        href: introduction.qmd
+      - section: "Tropical Cyclones"
+        contents:
+          - tropical-cyclones1.qmd
+          - tropical-cyclones2.qmd
+      - section: "Data"
+        contents:
+          - ibtracs1.qmd
+          - ibtracs2.qmd
+      - section: "Analysis"
+        contents:
+          - analysis1.qmd
+          - analysis2.qmd
+      - acknowlegment.qmd
+```
+
+
+## Activities
+
+- Create a Quarto Website (using default settings)
+    + Inspect the content of the website
+- Examples of websites:
+    + Personal (landing page)
+    + Blog
+    + Book
+    + Project
+- Create another basic website: e.g. minimalist project version
+    + Add files
+    + Add code
+    + Add images
+- Navigation options:
+    + Top Navigation
+    + Side Navigation
+    + Top-and-Side Navigation
+
+

@@ -1,0 +1,153 @@
+---
+title: "4) Mapping Tracks"
+---
+
+
+This module involves visualizing maps of storm tracks on a single basin, e.g. 
+North Atlantic (NA) or East Pacific (EP).
+
+This module follows the same exploratory "spirit" of the previous module, with
+the sole purpose of _getting to know the data_.
+
+
+### Mapping Approaches
+
+We can consider 2 mapping approaches based on the following R packages:
+
+- Static maps: `"ggplot2"` + `"sf"` + `"rnaturalearth"`
+
+- Web-interactive maps: `"leaflet"`
+
+
+### Data Formats
+
+Also, we can consider 2 types of data formats:
+
+__CSV__ (plotting `LAT` and `LON` coordinates)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.NA.list.v04r01.csv" target="_blank">ibtracs.NA.list.v04r01.csv</a> (North Atlantic)
+
+
+__Shapefile__ (either in "point" or "line" geometry)
+
+- __Point shapefile example:__ <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/shapefile/IBTrACS.NA.list.v04r01.points.zip" target="_blank">IBTrACS.NA.list.v04r01.points.zip</a> (North Atlantic)
+
+
+- __Line shapefile example:__ <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/shapefile/IBTrACS.NA.list.v04r01.lines.zip" target="_blank">IBTrACS.NA.list.v04r01.lines.zip</a> (North Atlantic)
+
+
+
+## Example
+
+Here's an example of a static map using the CSV file `ibtracs.last3years.list.v04r01.csv`
+
+<a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.last3years.list.v04r01.csv" target="_blank">ibtracs.last3years.list.v04r01.csv</a>
+
+```{r message = FALSE}
+library(tidyverse)
+library(lubridate)
+library(sf)
+library(rnaturalearth)
+```
+
+```{r}
+# import CSV file with read.csv()
+# read-in only first 16 columns
+ibtracs <- "ibtracs.last3years.list.v04r01.csv"
+
+# names of first 16 columns
+col_names <- c(
+  "SID",
+  "SEASON",
+  "NUMBER",
+  "BASIN",
+  "SUBBASIN",
+  "NAME",
+  "ISO_TIME",
+  "NATURE",
+  "LAT",
+  "LON",
+  "WMO_WIND",
+  "WMO_PRES",
+  "WMO_AGENCY",
+  "TRACK_TYPE",
+  "DIST2LAND",
+  "LANDFALL"
+)
+
+# data-type of first 16 columns
+col_types <- c(
+  "character",
+  "integer",
+  "integer",
+  "character",
+  "character",
+  "character",
+  "character",
+  "character",
+  "double",
+  "double",
+  "integer",
+  "integer",
+  "character",
+  "character",
+  "integer",
+  "integer"  
+)
+
+
+dat <- read.csv(
+  file = ibtracs,
+  colClasses = c(col_types, rep("NULL", 158)),
+  stringsAsFactors = FALSE, 
+  skip = 2, # skip first 2 rows
+  na.strings = " ")
+
+colnames(dat) <- col_names
+```
+
+
+```{r}
+dat_2022 = dat |> 
+  filter(SEASON == 2022)
+```
+
+```{r}
+world_map = ne_countries(returnclass = "sf")
+
+ggplot() +
+  geom_sf(data = world_map) +
+  geom_path(data = dat_2022, 
+            aes(x = LON, y = LAT, group = SID), 
+            linewidth = 0.5, color = "red") +
+  labs(title = "Tropical Cyclones in 2022",
+       x = "", y = "")
+```
+
+
+
+## Mapping Ideas
+
+__Example 1:__ One example of storm tracks is the following map of the North 
+Atlantic and the Eastern North Pacific; see 
+_Tropical Cyclone Climatology_ webpage <a href="https://www.nhc.noaa.gov/climo/" target="_blank">https://www.nhc.noaa.gov/climo/</a>
+
+![](images/atlantic-all-storms-1851-2017.jpg)
+
+\
+
+__Example 2:__ Other map idea can be based on the Points of Origin and Tracks
+of storms taking place at a certain time of year (e.g. August 11-20); see 
+_Tropical Cyclone Climatology_ webpage <a href="https://www.nhc.noaa.gov/climo/" target="_blank">https://www.nhc.noaa.gov/climo/</a>
+
+![](images/tracks-aug-11-20.png)
+
+\
+
+__Example 3:__ One particular graphic that is extremely eye-catching is a map
+of storm tracks around the world; see <a href="https://coast.noaa.gov/hurricanes/#map=4/32/-80" target="_blank">https://coast.noaa.gov/hurricanes/#map=4/32/-80
+</a> 
+
+
+![](images/all-storms-world.jpg)
+

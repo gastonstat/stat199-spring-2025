@@ -1,0 +1,211 @@
+---
+title: "2) IBTrACS Data"
+---
+
+In this module we introduce the data source for the project.
+
+
+## IBTrACS Data
+
+The data of interest comes from the __International Best Track Archive for Climate Stewardship__ (IBTrACS), which is the most complete global collection of tropical cyclones available, and it is available in the following website:
+
+<a href="https://www.ncei.noaa.gov/products/international-best-track-archive" target="_blank">https://www.ncei.noaa.gov/products/international-best-track-archive</a>
+
+<a href="https://www.ncei.noaa.gov/products/international-best-track-archive" target="_blank"><img src="images/ibtracs-website.png" width="700"/></a>
+
+\
+
+### Data Documentation
+
+- __Technical Documentation__: Caveats, usage information, and other details about how to use and apply IBTrACS data.
+
+    <https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-07/IBTrACS_version4r01_Technical_Details.pdf>
+
+
+- __V04r01 Column Documentation__: Descriptions of each CSV and shapefile data column.
+
+    <https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-06/IBTrACS%20v04r01%20column%20documentation.pdf>
+
+
+\
+
+
+### Data Files
+
+IBTrACS data is available in a couple of different formats. For the scope of the project, we'll only consider data in CSV and Shapefiles formats.
+
+
+#### CSV files
+
+Missing data are stored as blank cells to decrease file sizes (other netCDF and shapefiles use -9999.0 for missing data).
+
+<a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/" target="_blank">https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/</a>
+
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.ALL.list.v04r01.csv" target="_blank">ibtracs.ALL.list.v04r01.csv</a> (All basins, all years)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.EP.list.v04r01.csv" target="_blank">ibtracs.EP.list.v04r01.csv</a> (Eastern North Pacific)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.NA.list.v04r01.csv" target="_blank">ibtracs.NA.list.v04r01.csv</a> (North Atlantic)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.NI.list.v04r01.csv" target="_blank">ibtracs.NI.list.v04r01.csv</a> (North Indian)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.SA.list.v04r01.csv" target="_blank">ibtracs.SA.list.v04r01.csv</a> (South Atlantic)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.SI.list.v04r01.csv" target="_blank">ibtracs.SI.list.v04r01.csv</a> (South Indian)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.SP.list.v04r01.csv" target="_blank">ibtracs.SP.list.v04r01.csv</a> (South Pacific)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.WP.list.v04r01.csv" target="_blank">ibtracs.WP.list.v04r01.csv</a> (Western North Pacific)
+
+- <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.since1980.list.v04r01.csv" target="_blank">ibtracs.since1980.list.v04r01.csv</a> (All basins since 1980)
+
+
+
+#### Shapefiles
+
+Files are available as __point__ and __line__ shapefiles with the usual shapefile parts (prj, shx, shp, and dbf files). File metadata (xml files) are not currently available. The CSV column description file can be referenced for the definitions of each variable.
+
+<a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/shapefile/" target="_blank">https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/shapefile/</a>
+
+
+- __Point shapefile example:__ <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/shapefile/IBTrACS.NA.list.v04r01.points.zip" target="_blank">IBTrACS.NA.list.v04r01.points.zip</a> (North Atlantic)
+
+
+- __Line shapefile example:__ <a href="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/shapefile/IBTrACS.NA.list.v04r01.lines.zip" target="_blank">IBTrACS.NA.list.v04r01.lines.zip</a> (North Atlantic)
+
+
+\
+
+
+### Citation
+
+When referencing IBTrACS in a written work, use both the BAMS paper and dataset citations given below:
+
+- Knapp, K. R., M. C. Kruk, D. H. Levinson, H. J. Diamond, and C. J. Neumann, 2010: The International Best Track Archive for Climate Stewardship (IBTrACS): Unifying tropical cyclone best track data. Bulletin of the American Meteorological Society, 91, 363-376. [doi:10.1175/2009BAMS2755.1](https://doi.org/10.1175/2009BAMS2755.1)
+
+- Gahtan, J., K. R. Knapp, C. J. Schreck, H. J. Diamond, J. P. Kossin, M. C. Kruk, 2024: International Best Track Archive for Climate Stewardship (IBTrACS) Project, Version 4r01. [indicate subset used]. NOAA National Centers for Environmental Information. [doi:10.25921/82ty-9e16](https://doi.org/10.25921/82ty-9e16) [access date].
+
+
+\
+
+-----
+
+
+## File Structure
+
+The following diagram depicts a sample file structure for how to organize the
+data files of this project:
+
+```bash
+Stat199/
+   ibtracs-data/
+      csv-raw-files/
+         ibtracs.NA.list.v04r01.csv
+         ibtracs.WP.list.v04r01.csv
+         ...
+      csv-clean-files
+         ibtracs-north-atlantic.csv
+         ibtracs-western-pacific.csv
+         ...
+      shapefiles/
+         IBTrACS.NA.list.v04r01.points
+         IBTrACS.NA.list.v04r01.linesw
+         ...
+      scripts/
+         data-prepration.R
+```
+
+As you can tell, the directory `ibtracs-data/` includes a subdirectory `scripts/`
+that could store R scripts for carrying out the data preparation steps.
+
+Because the raw CSV files are fairly large, and contain a large number of 
+irrelevant variables for our project, we may end up creating smaller data 
+sets saved into their "clean" CSV files (stored in `csv-clean-files/`).
+
+
+### Import CSV in R
+
+There are various ways to import an ibtracs CSV file into R. Perhaps the 2
+main importing functions are base R `read.csv()`, and `"readr"` function
+`read_csv()` (recall that `"readr"` is part of `"tidyverse"`)
+
+
+#### Import CSV with `read.csv()`
+
+To import an ibtracs CSV file with `read.csv()`
+
+```r
+# import CSV file with read.csv()
+# read-in only first 16 columns
+ibtracs <- "ibtracs.NA.list.v04r00.csv"
+
+# names of first 16 columns
+col_names <- c(
+  "SID",
+  "SEASON",
+  "NUMBER",
+  "BASIN",
+  "SUBBASIN",
+  "NAME",
+  "ISO_TIME",
+  "NATURE",
+  "LAT",
+  "LON",
+  "WMO_WIND",
+  "WMO_PRES",
+  "WMO_AGENCY",
+  "TRACK_TYPE",
+  "DIST2LAND",
+  "LANDFALL"
+)
+
+# data-type of first 16 columns
+col_types <- c(
+  "character",
+  "integer",
+  "integer",
+  "character",
+  "character",
+  "character",
+  "character",
+  "character",
+  "double",
+  "double",
+  "integer",
+  "integer",
+  "character",
+  "character",
+  "integer",
+  "integer"  
+)
+
+
+dat <- read.csv(
+  file = ibtracs,
+  colClasses = c(col_types, rep("NULL", 158)),
+  stringsAsFactors = FALSE, 
+  skip = 77876, # starting SEASON 1970
+  na.strings = " ")
+
+colnames(dat) <- col_names
+```
+
+
+#### First Contact
+
+The idea is to have a first contact with the data, namely:
+
+- Import data in R
+
+- Import data: only a specific set of columns
+
+- Make sure the data documentation makes sense
+    + Are there any discrepancies/inconsistencies between the imported data and
+    the codebook?
+
+- In terms of "time", what years are available in the data?
+
+- We plan to focus our analysis since 1980 to present, but should we include other years prior to 1980?
+
+

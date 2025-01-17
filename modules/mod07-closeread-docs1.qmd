@@ -1,0 +1,43 @@
+---
+title: "7) Closeread Docs I"
+---
+
+In addition to using a Quarto Website for reporting and communication purposes, 
+it would also be nice to utilize __Closeread__, a Quarto extension to create scrollytelling stories with HTML documents.
+
+The official website of Closeread is: <br>
+<a href="https://closeread.dev/" target="_blank">https://closeread.dev</a>
+
+A companion website to learn Closeread is: <br>
+<a href="https://www.gastonsanchez.com/learn-closeread/" target="_blank">https://www.gastonsanchez.com/learn-closeread/</a>
+
+
+\
+
+
+## Examples
+
+Number of tropical cyclones in the North Atlantic, 1980-2022
+
+<a href="https://www.gastonsanchez.com/learn-closeread/examples/example7" target="_blank">https://www.gastonsanchez.com/learn-closeread/examples/example7</a>
+
+\
+
+Mapping Storms in the North Atlantic, 1980-2022
+
+<a href="https://www.gastonsanchez.com/learn-closeread/examples/example9" target="_blank">https://www.gastonsanchez.com/learn-closeread/examples/example9</a>
+
+
+
+## Creating a Closeread Document
+
+First contact with Closeread Docs
+
+- Introduction: <br>
+<https://www.gastonsanchez.com/learn-closeread/modules/02-introduction.html>
+
+- Minimal Closeread with Text: <br>
+<https://www.gastonsanchez.com/learn-closeread/modules/03-intro-text.html>
+
+- Minimal Closeread with Images: <br>
+<https://www.gastonsanchez.com/learn-closeread/modules/04-intro-images.html>

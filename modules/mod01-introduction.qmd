@@ -1,0 +1,131 @@
+---
+title: "1) Introduction"
+---
+
+Because this research project is about Tropical Cyclones (e.g. tropical depressions,
+tropical storms, hurricanes, cyclones, typhoons), the first step involves getting a crash introduction to all things tropical cyclones.
+
+
+## Basics of Tropical Cyclones
+
+Information about Tropical Cyclones: <br>
+<https://wmo.int/topics/tropical-cyclone>
+
+- [Characteristics of Tropical Cylones](https://wmo.int/content/characteristics-of-tropical-cyclones)
+
+- [Tropical Cyclone Naming](https://wmo.int/resources/wmo-fact-sheets/tropical-cyclone-naming)
+
+- [Classification of Tropical Cyclones](https://wmo.int/content/classification-of-tropical-cyclones)
+
+- [Tropical Cyclone Climatology](https://wmo.int/resources/wmo-fact-sheets/tropical-cyclone-climatology)
+
+
+Hurricanes Frequently Asked Questions: <br>
+<https://www.aoml.noaa.gov/hrd-faq/>
+
+Encyclopedia Britannica entry on Tropical Cyclone: <br>
+<https://www.britannica.com/science/tropical-cyclone>
+
+Wikipedia entry on Tropical Cyclone: <br>
+<https://en.wikipedia.org/wiki/Tropical_cyclone>
+
+
+
+## Videos
+
+How Do Hurricanes Form (NOAA SciJinks)
+
+<https://www.youtube.com/watch?v=wPDoIrGUrEc>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wPDoIrGUrEc?si=xSmKTB3c7ojhAgyN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+Formation Of A Tropical Cyclone (ClickView)
+
+<https://www.youtube.com/watch?v=UKL9NIxLIIE>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UKL9NIxLIIE?si=8JugKjIBdzicR2EB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+What are hurricanes, typhoons and tropical cyclones? (Met Office)
+
+<https://www.youtube.com/watch?v=SSx_gisp24w>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SSx_gisp24w?si=opYyo020wRsAg2vN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+Hurricanes 101 (National Geographic)
+
+<https://www.youtube.com/watch?v=zP4rgvu4xDE>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LlXVikDkyTg?si=3QjOfVawl1fCR606" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+How a Hurricane Is Born (BBC)
+
+<https://www.youtube.com/watch?v=4f45jA5UxB0>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4f45jA5UxB0?si=v9maLIoaKyf42huX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+\
+
+How Hurricanes Form And Why They're Getting Stronger (Insider News)
+
+<https://www.youtube.com/watch?v=5m68_07Sav4>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5m68_07Sav4?si=LCZTYWfAsawaYnyq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+How to Make a Hurricane (StarTalk)
+
+<https://www.youtube.com/watch?v=Xqc8P0WcPTM>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xqc8P0WcPTM?si=m8wUXJW9vSLeVjQJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+The "dirty side" of a hurricane, explained (Vox)
+
+<https://www.youtube.com/watch?v=G8SK6e8I01Y>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G8SK6e8I01Y?si=ulNpWcxSkR_gUfpB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+What Causes the Worst Hurricanes (Real Science)
+
+<https://www.youtube.com/watch?v=2hkdAMyn-ZU>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2hkdAMyn-ZU?si=_kF7zVwwzSl2LTxV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+The Strange Physics That Makes Hurricanes So Powerful (Be Smart)
+
+<https://www.youtube.com/watch?v=Xtu2_ziBI_w>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xtu2_ziBI_w?si=3ILjoAGqhbZycvTT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+Why Hurricanes Are Becoming More Dangerous (StarTalk)
+
+<https://www.youtube.com/watch?v=A3FFKYyuem4>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A3FFKYyuem4?si=tU7cS2PAdjqPNU2D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+\
+
+Scientists Discuss the Future of Extreme Weather (StarTalk)
+
+<https://www.youtube.com/watch?v=rc436HZ0zLM>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rc436HZ0zLM?si=6Oxp95BTgl0H7Euk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+

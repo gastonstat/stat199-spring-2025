@@ -1,0 +1,351 @@
+[
+  {
+    "objectID": "modules/mod08-closeread-docs2.html",
+    "href": "modules/mod08-closeread-docs2.html",
+    "title": "8) Closeread Docs II",
+    "section": "",
+    "text": "In this module we continue our discussion around Closeread documents.\nThis time, we’ll focus on how to tell a story based on tropical cyclones, which involves using R code, some graphics, and going through the design process of a scrollytelling document.",
+    "crumbs": [
+      "Modules",
+      "8) Closeread Docs II"
+    ]
+  },
+  {
+    "objectID": "modules/mod07-closeread-docs1.html",
+    "href": "modules/mod07-closeread-docs1.html",
+    "title": "7) Closeread Docs I",
+    "section": "",
+    "text": "In addition to using a Quarto Website for reporting and communication purposes, it would also be nice to utilize Closeread, a Quarto extension to create scrollytelling stories with HTML documents.\nThe official website of Closeread is:  https://closeread.dev\nA companion website to learn Closeread is:  https://www.gastonsanchez.com/learn-closeread/",
+    "crumbs": [
+      "Modules",
+      "7) Closeread Docs I"
+    ]
+  },
+  {
+    "objectID": "modules/mod07-closeread-docs1.html#examples",
+    "href": "modules/mod07-closeread-docs1.html#examples",
+    "title": "7) Closeread Docs I",
+    "section": "Examples",
+    "text": "Examples\nNumber of tropical cyclones in the North Atlantic, 1980-2022\nhttps://www.gastonsanchez.com/learn-closeread/examples/example7\n\n\nMapping Storms in the North Atlantic, 1980-2022\nhttps://www.gastonsanchez.com/learn-closeread/examples/example9",
+    "crumbs": [
+      "Modules",
+      "7) Closeread Docs I"
+    ]
+  },
+  {
+    "objectID": "modules/mod07-closeread-docs1.html#creating-a-closeread-document",
+    "href": "modules/mod07-closeread-docs1.html#creating-a-closeread-document",
+    "title": "7) Closeread Docs I",
+    "section": "Creating a Closeread Document",
+    "text": "Creating a Closeread Document\nFirst contact with Closeread Docs\n\nIntroduction:  https://www.gastonsanchez.com/learn-closeread/modules/02-introduction.html\nMinimal Closeread with Text:  https://www.gastonsanchez.com/learn-closeread/modules/03-intro-text.html\nMinimal Closeread with Images:  https://www.gastonsanchez.com/learn-closeread/modules/04-intro-images.html",
+    "crumbs": [
+      "Modules",
+      "7) Closeread Docs I"
+    ]
+  },
+  {
+    "objectID": "modules/mod04-mapping-tracks.html",
+    "href": "modules/mod04-mapping-tracks.html",
+    "title": "4) Mapping Tracks",
+    "section": "",
+    "text": "This module involves visualizing maps of storm tracks on a single basin, e.g.  North Atlantic (NA) or East Pacific (EP).\nThis module follows the same exploratory “spirit” of the previous module, with the sole purpose of getting to know the data.",
+    "crumbs": [
+      "Modules",
+      "4) Mapping Tracks"
+    ]
+  },
+  {
+    "objectID": "modules/mod04-mapping-tracks.html#example",
+    "href": "modules/mod04-mapping-tracks.html#example",
+    "title": "4) Mapping Tracks",
+    "section": "Example",
+    "text": "Example\nHere’s an example of a static map using the CSV file ibtracs.last3years.list.v04r01.csv\nibtracs.last3years.list.v04r01.csv\n\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(sf)\nlibrary(rnaturalearth)\n\n\n# import CSV file with read.csv()\n# read-in only first 16 columns\nibtracs &lt;- \"ibtracs.last3years.list.v04r01.csv\"\n\n# names of first 16 columns\ncol_names &lt;- c(\n  \"SID\",\n  \"SEASON\",\n  \"NUMBER\",\n  \"BASIN\",\n  \"SUBBASIN\",\n  \"NAME\",\n  \"ISO_TIME\",\n  \"NATURE\",\n  \"LAT\",\n  \"LON\",\n  \"WMO_WIND\",\n  \"WMO_PRES\",\n  \"WMO_AGENCY\",\n  \"TRACK_TYPE\",\n  \"DIST2LAND\",\n  \"LANDFALL\"\n)\n\n# data-type of first 16 columns\ncol_types &lt;- c(\n  \"character\",\n  \"integer\",\n  \"integer\",\n  \"character\",\n  \"character\",\n  \"character\",\n  \"character\",\n  \"character\",\n  \"double\",\n  \"double\",\n  \"integer\",\n  \"integer\",\n  \"character\",\n  \"character\",\n  \"integer\",\n  \"integer\"  \n)\n\n\ndat &lt;- read.csv(\n  file = ibtracs,\n  colClasses = c(col_types, rep(\"NULL\", 158)),\n  stringsAsFactors = FALSE, \n  skip = 2, # skip first 2 rows\n  na.strings = \" \")\n\ncolnames(dat) &lt;- col_names\n\n\ndat_2022 = dat |&gt; \n  filter(SEASON == 2022)\n\n\nworld_map = ne_countries(returnclass = \"sf\")\n\nggplot() +\n  geom_sf(data = world_map) +\n  geom_path(data = dat_2022, \n            aes(x = LON, y = LAT, group = SID), \n            linewidth = 0.5, color = \"red\") +\n  labs(title = \"Tropical Cyclones in 2022\",\n       x = \"\", y = \"\")",
+    "crumbs": [
+      "Modules",
+      "4) Mapping Tracks"
+    ]
+  },
+  {
+    "objectID": "modules/mod04-mapping-tracks.html#mapping-ideas",
+    "href": "modules/mod04-mapping-tracks.html#mapping-ideas",
+    "title": "4) Mapping Tracks",
+    "section": "Mapping Ideas",
+    "text": "Mapping Ideas\nExample 1: One example of storm tracks is the following map of the North Atlantic and the Eastern North Pacific; see Tropical Cyclone Climatology webpage https://www.nhc.noaa.gov/climo/\n\n\n\nExample 2: Other map idea can be based on the Points of Origin and Tracks of storms taking place at a certain time of year (e.g. August 11-20); see Tropical Cyclone Climatology webpage https://www.nhc.noaa.gov/climo/\n\n\n\nExample 3: One particular graphic that is extremely eye-catching is a map of storm tracks around the world; see https://coast.noaa.gov/hurricanes/#map=4/32/-80",
+    "crumbs": [
+      "Modules",
+      "4) Mapping Tracks"
+    ]
+  },
+  {
+    "objectID": "modules/mod02-data.html",
+    "href": "modules/mod02-data.html",
+    "title": "2) IBTrACS Data",
+    "section": "",
+    "text": "In this module we introduce the data source for the project.",
+    "crumbs": [
+      "Modules",
+      "2) IBTrACS Data"
+    ]
+  },
+  {
+    "objectID": "modules/mod02-data.html#ibtracs-data",
+    "href": "modules/mod02-data.html#ibtracs-data",
+    "title": "2) IBTrACS Data",
+    "section": "IBTrACS Data",
+    "text": "IBTrACS Data\nThe data of interest comes from the International Best Track Archive for Climate Stewardship (IBTrACS), which is the most complete global collection of tropical cyclones available, and it is available in the following website:\nhttps://www.ncei.noaa.gov/products/international-best-track-archive\n\n\n\n\nData Documentation\n\nTechnical Documentation: Caveats, usage information, and other details about how to use and apply IBTrACS data.\nhttps://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-07/IBTrACS_version4r01_Technical_Details.pdf\nV04r01 Column Documentation: Descriptions of each CSV and shapefile data column.\nhttps://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-06/IBTrACS%20v04r01%20column%20documentation.pdf\n\n\n\n\n\nData Files\nIBTrACS data is available in a couple of different formats. For the scope of the project, we’ll only consider data in CSV and Shapefiles formats.\n\nCSV files\nMissing data are stored as blank cells to decrease file sizes (other netCDF and shapefiles use -9999.0 for missing data).\nhttps://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/\n\nibtracs.ALL.list.v04r01.csv (All basins, all years)\nibtracs.EP.list.v04r01.csv (Eastern North Pacific)\nibtracs.NA.list.v04r01.csv (North Atlantic)\nibtracs.NI.list.v04r01.csv (North Indian)\nibtracs.SA.list.v04r01.csv (South Atlantic)\nibtracs.SI.list.v04r01.csv (South Indian)\nibtracs.SP.list.v04r01.csv (South Pacific)\nibtracs.WP.list.v04r01.csv (Western North Pacific)\nibtracs.since1980.list.v04r01.csv (All basins since 1980)\n\n\n\nShapefiles\nFiles are available as point and line shapefiles with the usual shapefile parts (prj, shx, shp, and dbf files). File metadata (xml files) are not currently available. The CSV column description file can be referenced for the definitions of each variable.\nhttps://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/shapefile/\n\nPoint shapefile example: IBTrACS.NA.list.v04r01.points.zip (North Atlantic)\nLine shapefile example: IBTrACS.NA.list.v04r01.lines.zip (North Atlantic)\n\n\n\n\n\n\nCitation\nWhen referencing IBTrACS in a written work, use both the BAMS paper and dataset citations given below:\n\nKnapp, K. R., M. C. Kruk, D. H. Levinson, H. J. Diamond, and C. J. Neumann, 2010: The International Best Track Archive for Climate Stewardship (IBTrACS): Unifying tropical cyclone best track data. Bulletin of the American Meteorological Society, 91, 363-376. doi:10.1175/2009BAMS2755.1\nGahtan, J., K. R. Knapp, C. J. Schreck, H. J. Diamond, J. P. Kossin, M. C. Kruk, 2024: International Best Track Archive for Climate Stewardship (IBTrACS) Project, Version 4r01. [indicate subset used]. NOAA National Centers for Environmental Information. doi:10.25921/82ty-9e16 [access date].",
+    "crumbs": [
+      "Modules",
+      "2) IBTrACS Data"
+    ]
+  },
+  {
+    "objectID": "modules/mod02-data.html#file-structure",
+    "href": "modules/mod02-data.html#file-structure",
+    "title": "2) IBTrACS Data",
+    "section": "File Structure",
+    "text": "File Structure\nThe following diagram depicts a sample file structure for how to organize the data files of this project:\nStat199/\n   ibtracs-data/\n      csv-raw-files/\n         ibtracs.NA.list.v04r01.csv\n         ibtracs.WP.list.v04r01.csv\n         ...\n      csv-clean-files\n         ibtracs-north-atlantic.csv\n         ibtracs-western-pacific.csv\n         ...\n      shapefiles/\n         IBTrACS.NA.list.v04r01.points\n         IBTrACS.NA.list.v04r01.linesw\n         ...\n      scripts/\n         data-prepration.R\nAs you can tell, the directory ibtracs-data/ includes a subdirectory scripts/ that could store R scripts for carrying out the data preparation steps.\nBecause the raw CSV files are fairly large, and contain a large number of irrelevant variables for our project, we may end up creating smaller data sets saved into their “clean” CSV files (stored in csv-clean-files/).\n\nImport CSV in R\nThere are various ways to import an ibtracs CSV file into R. Perhaps the 2 main importing functions are base R read.csv(), and \"readr\" function read_csv() (recall that \"readr\" is part of \"tidyverse\")\n\nImport CSV with read.csv()\nTo import an ibtracs CSV file with read.csv()\n# import CSV file with read.csv()\n# read-in only first 16 columns\nibtracs &lt;- \"ibtracs.NA.list.v04r00.csv\"\n\n# names of first 16 columns\ncol_names &lt;- c(\n  \"SID\",\n  \"SEASON\",\n  \"NUMBER\",\n  \"BASIN\",\n  \"SUBBASIN\",\n  \"NAME\",\n  \"ISO_TIME\",\n  \"NATURE\",\n  \"LAT\",\n  \"LON\",\n  \"WMO_WIND\",\n  \"WMO_PRES\",\n  \"WMO_AGENCY\",\n  \"TRACK_TYPE\",\n  \"DIST2LAND\",\n  \"LANDFALL\"\n)\n\n# data-type of first 16 columns\ncol_types &lt;- c(\n  \"character\",\n  \"integer\",\n  \"integer\",\n  \"character\",\n  \"character\",\n  \"character\",\n  \"character\",\n  \"character\",\n  \"double\",\n  \"double\",\n  \"integer\",\n  \"integer\",\n  \"character\",\n  \"character\",\n  \"integer\",\n  \"integer\"  \n)\n\n\ndat &lt;- read.csv(\n  file = ibtracs,\n  colClasses = c(col_types, rep(\"NULL\", 158)),\n  stringsAsFactors = FALSE, \n  skip = 77876, # starting SEASON 1970\n  na.strings = \" \")\n\ncolnames(dat) &lt;- col_names\n\n\nFirst Contact\nThe idea is to have a first contact with the data, namely:\n\nImport data in R\nImport data: only a specific set of columns\nMake sure the data documentation makes sense\n\nAre there any discrepancies/inconsistencies between the imported data and the codebook?\n\nIn terms of “time”, what years are available in the data?\nWe plan to focus our analysis since 1980 to present, but should we include other years prior to 1980?",
+    "crumbs": [
+      "Modules",
+      "2) IBTrACS Data"
+    ]
+  },
+  {
+    "objectID": "modules/mod10-shiny-apps.html",
+    "href": "modules/mod10-shiny-apps.html",
+    "title": "10) Shiny Apps",
+    "section": "",
+    "text": "Another interesting product to be developed for this project is one or more shiny apps."
+  },
+  {
+    "objectID": "modules/mod10-shiny-apps.html#ideas",
+    "href": "modules/mod10-shiny-apps.html#ideas",
+    "title": "10) Shiny Apps",
+    "section": "Ideas",
+    "text": "Ideas\nShiny app to visualize the storm tracks\nFor instance, say we focus on a particular basin (e.g. North Atlantic):\n\nwidget to choose Season (i.e. Year)\nwidget to filter certain category levels (e.g. depressions, storms, hurricanes, etc)\nwidget to highlight the track sections above a certain wind speed\nwidget to filter month\nwidget to increase size of points or width of line based on wind speed"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Supervised Independent Study and Research",
+    "section": "",
+    "text": "This is the companion website for STAT 199 Supervised Independent Study and Research (Spring 2025) under the supervision of Gaston Sanchez, at UC Berkeley.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#spring-2025-calendar",
+    "href": "index.html#spring-2025-calendar",
+    "title": "Supervised Independent Study and Research",
+    "section": "Spring 2025 Calendar",
+    "text": "Spring 2025 Calendar\nTentative calendar subject to change.\n\n\n\nDate\nSession\nLogs\n\n\n\n\n1/29\n1) Introduction\nlog 1\n\n\n2/05\n2) IBTrACS Data\nlog 2\n\n\n2/12\n3) EDA Single Basin\nlog 3\n\n\n2/19\n4) Mapping Storm Tracks\nlog 4\n\n\n2/26\n5) Quarto Websites I\nlog 5\n\n\n3/05\n6) Quarto Websites II\nlog 6\n\n\n3/12\n7) Closeread Documents I\nlog 7\n\n\n3/19\n8) Closeread Documents II\nlog 8\n\n\n3/26\nSpring Recess\n\n\n\n4/02\n9) Animations\nlog 9\n\n\n4/09\n10) Shiny App\nlog 10\n\n\n4/16\n11) TBA\nlog 11\n\n\n4/23\n12) TBA\nlog 12",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Like many other departments, the Department of Statistics at UC Berkeley offers different special course types for students to earn credit for participating in research. These include STAT 197 and STAT 199, and courses specific to the Honors Program.\nIn particular, STAT 199 courses provide students with the opportunity to do independent study and research supervised by a faculty sponsor.\nThis website is maintained by me, Gaston Sanchez, to keep track of my sponsored STAT 199 course during the Spring 2025 semester.\n\n\n\n\n\n\nCourse Info\n\n\n\nSupervisor: Gaston Sanchez\nCode #: TBD\nUnits: 2\nDates: Tentative Jan-23 / May-07",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#about-stat-199",
+    "href": "about.html#about-stat-199",
+    "title": "About",
+    "section": "",
+    "text": "Like many other departments, the Department of Statistics at UC Berkeley offers different special course types for students to earn credit for participating in research. These include STAT 197 and STAT 199, and courses specific to the Honors Program.\nIn particular, STAT 199 courses provide students with the opportunity to do independent study and research supervised by a faculty sponsor.\nThis website is maintained by me, Gaston Sanchez, to keep track of my sponsored STAT 199 course during the Spring 2025 semester.\n\n\n\n\n\n\nCourse Info\n\n\n\nSupervisor: Gaston Sanchez\nCode #: TBD\nUnits: 2\nDates: Tentative Jan-23 / May-07",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#description",
+    "href": "about.html#description",
+    "title": "About",
+    "section": "Description",
+    "text": "Description\nThis research project is a Data Analysis Project of Tropical Cyclones.\nOur aim is to carry out an exploratory analysis of tropical cyclones in some of the Ocean basins around the world.\nWe expect to produce and share the work done in this project through the publication of (ideally):\n\nMain website.\nShiny web app(s).",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#desiderata",
+    "href": "about.html#desiderata",
+    "title": "About",
+    "section": "Desiderata",
+    "text": "Desiderata\nSome of the things that—time permitting—would be nice to analyze, visualize, describe:\n\nDistribution of Named Storms, Hurricanes, and Major Hurricanes in the North Atlantic, per year.\nVisualize storm tracks in the North Atlantic and East Pacific in the last 45+ years\n\nBroken down by month\nTaken into account wind speed\nConsidering points of origin\nUsing static plots (ggplot, sf)\nUsing web-interactive plots (leaflet)\nUsing animated plots (gganimate)\n\nVisualize points of origin and tracks for:\n\nnamed storms\nhurricanes\nmajor hurricanes",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/mod03-eda-single-basin.html",
+    "href": "modules/mod03-eda-single-basin.html",
+    "title": "3) EDA Single Basin",
+    "section": "",
+    "text": "This module involves a first exploratory analysis of a single basin, e.g.  North Atlantic (NA) or East Pacific (EP).\nThe idea is to have a first contact with the data, namely:",
+    "crumbs": [
+      "Modules",
+      "3) EDA Single Basin"
+    ]
+  },
+  {
+    "objectID": "modules/mod03-eda-single-basin.html#what-to-analyze",
+    "href": "modules/mod03-eda-single-basin.html#what-to-analyze",
+    "title": "3) EDA Single Basin",
+    "section": "What to Analyze?",
+    "text": "What to Analyze?\nHere are some ideas:\n\nStart with a given basin, e.g. North Atlantic\nChoose one or two years (or a handful of years?)\n\nWhat might be the most reasonable “oldest” year to work with (e.g. 1950, 1975, 1980)?\n\nPerform a univariate exploratory analysis of the following columns (colums 1-16):\n  \"SID\"\n  \"SEASON\"\n  \"NUMBER\"\n  \"BASIN\"\n  \"SUBBASIN\"\n  \"NAME\"\n  \"ISO_TIME\"\n  \"NATURE\"\n  \"LAT\"\n  \"LON\"\n  \"WMO_WIND\"\n  \"WMO_PRES\"\n  \"WMO_AGENCY\"\n  \"TRACK_TYPE\"\n  \"DIST2LAND\"\n  \"LANDFALL\"\nShould we derive other variables? (We may need to use \"lubridate\" package)\n\nMONTH: extract month from ISO_TIME\nDAY: extract day from ISO_TIME\nHOUR: extract hour from ISO_TIME\nDURATION: compute (or summarize) duration of a storm\nWIND_KPH: wind in kilometers-per-hour\nCATEGORY: mutate a category column based on WIND speed (category values e.g. -1, 0, 1, 2, 3, 4, 5)\netc\n\nShould we be concerned about missing values?\nWhat cyclones have names? Is naming consistent with wind scale (i.e. a cyclone is given a name once it reaches “tropical storm” status)?",
+    "crumbs": [
+      "Modules",
+      "3) EDA Single Basin"
+    ]
+  },
+  {
+    "objectID": "modules/mod03-eda-single-basin.html#counting-storm-ideas",
+    "href": "modules/mod03-eda-single-basin.html#counting-storm-ideas",
+    "title": "3) EDA Single Basin",
+    "section": "Counting Storm Ideas",
+    "text": "Counting Storm Ideas\nAfter getting some degree of familiarity with the data, the next step could involve computing distributions (i.e. counting) of the following:\n\ndistribution of Named Storms (e.g. in the North Atlantic, per year),\ndistribution of Hurricanes (e.g. in the North Atlantic, per year),\ndistribution of Major Hurricanes (e.g. in the North Atlantic, per year),\n\nExample 1: The idea would be to obtain counts more or less similar to the graphic displayed in the figure Atlantic Basin Storm Count; see Tropical Cyclone Climatology webpage https://www.nhc.noaa.gov/climo/\n\n\n\nExample 2: Another storm count graphic is the one from the BCC article “How unusual has this hurricanes (2024) been?”; see https://www.bbc.com/news/articles/cden551l7kko",
+    "crumbs": [
+      "Modules",
+      "3) EDA Single Basin"
+    ]
+  },
+  {
+    "objectID": "modules/mod01-introduction.html",
+    "href": "modules/mod01-introduction.html",
+    "title": "1) Introduction",
+    "section": "",
+    "text": "Because this research project is about Tropical Cyclones (e.g. tropical depressions, tropical storms, hurricanes, cyclones, typhoons), the first step involves getting a crash introduction to all things tropical cyclones.",
+    "crumbs": [
+      "Modules",
+      "1) Introduction"
+    ]
+  },
+  {
+    "objectID": "modules/mod01-introduction.html#basics-of-tropical-cyclones",
+    "href": "modules/mod01-introduction.html#basics-of-tropical-cyclones",
+    "title": "1) Introduction",
+    "section": "Basics of Tropical Cyclones",
+    "text": "Basics of Tropical Cyclones\nInformation about Tropical Cyclones:  https://wmo.int/topics/tropical-cyclone\n\nCharacteristics of Tropical Cylones\nTropical Cyclone Naming\nClassification of Tropical Cyclones\nTropical Cyclone Climatology\n\nHurricanes Frequently Asked Questions:  https://www.aoml.noaa.gov/hrd-faq/\nEncyclopedia Britannica entry on Tropical Cyclone:  https://www.britannica.com/science/tropical-cyclone\nWikipedia entry on Tropical Cyclone:  https://en.wikipedia.org/wiki/Tropical_cyclone",
+    "crumbs": [
+      "Modules",
+      "1) Introduction"
+    ]
+  },
+  {
+    "objectID": "modules/mod01-introduction.html#videos",
+    "href": "modules/mod01-introduction.html#videos",
+    "title": "1) Introduction",
+    "section": "Videos",
+    "text": "Videos\nHow Do Hurricanes Form (NOAA SciJinks)\nhttps://www.youtube.com/watch?v=wPDoIrGUrEc\n\n\n\n\nFormation Of A Tropical Cyclone (ClickView)\nhttps://www.youtube.com/watch?v=UKL9NIxLIIE\n\n\n\n\nWhat are hurricanes, typhoons and tropical cyclones? (Met Office)\nhttps://www.youtube.com/watch?v=SSx_gisp24w\n\n\n\n\nHurricanes 101 (National Geographic)\nhttps://www.youtube.com/watch?v=zP4rgvu4xDE\n\n\n\n\nHow a Hurricane Is Born (BBC)\nhttps://www.youtube.com/watch?v=4f45jA5UxB0\n\n\n\n\nHow Hurricanes Form And Why They’re Getting Stronger (Insider News)\nhttps://www.youtube.com/watch?v=5m68_07Sav4\n\n\n\n\nHow to Make a Hurricane (StarTalk)\nhttps://www.youtube.com/watch?v=Xqc8P0WcPTM\n\n\n\n\nThe “dirty side” of a hurricane, explained (Vox)\nhttps://www.youtube.com/watch?v=G8SK6e8I01Y\n\n\n\n\nWhat Causes the Worst Hurricanes (Real Science)\nhttps://www.youtube.com/watch?v=2hkdAMyn-ZU\n\n\n\n\nThe Strange Physics That Makes Hurricanes So Powerful (Be Smart)\nhttps://www.youtube.com/watch?v=Xtu2_ziBI_w\n\n\n\n\nWhy Hurricanes Are Becoming More Dangerous (StarTalk)\nhttps://www.youtube.com/watch?v=A3FFKYyuem4\n\n\n\n\nScientists Discuss the Future of Extreme Weather (StarTalk)\nhttps://www.youtube.com/watch?v=rc436HZ0zLM",
+    "crumbs": [
+      "Modules",
+      "1) Introduction"
+    ]
+  },
+  {
+    "objectID": "modules/mod05-quarto-website1.html",
+    "href": "modules/mod05-quarto-website1.html",
+    "title": "5) Quarto Websites I",
+    "section": "",
+    "text": "To report and communicate the work done in this project, we’ll use a website created with Quarto Websites, and published to Quarto Pub.\nThe goal of this module is to provide a brief introduction to Quarto Websites. More specifically, the idea is to:",
+    "crumbs": [
+      "Modules",
+      "5) Quarto Websites I"
+    ]
+  },
+  {
+    "objectID": "modules/mod05-quarto-website1.html#creating-a-quarto-website",
+    "href": "modules/mod05-quarto-website1.html#creating-a-quarto-website",
+    "title": "5) Quarto Websites I",
+    "section": "Creating a Quarto Website",
+    "text": "Creating a Quarto Website\nQuarto Websites are a convenient way to publish the work done in this project.\nhttps://quarto.org/docs/websites/\n\nQuick Start\nTo create the website we’ll use a website project within RStudio. Follow the Quick Start below to read about this topic.\nhttps://quarto.org/docs/websites/#quick-start\n\n\nMain Workflow\n\nCreate a Quarto website (through an RStudio project)\nEdit the website\n\nadd files\nedit content of files\nhandle the file structure of the website\n\nPreview and/or Render the website\nOptional: Publish the website\nRepeat steps 2-4 as necessary\n\n\nWebsite Preview\nTo preview a website, use the quarto preview command, which will render and run the website into in your browser or in an embedded window.\n\n\nTerminal\n\n# preview the website in the project directory\nquarto preview\n\n\n\nWebsite Render\nTo render (but not preview) a website, use the quarto render command, which will render the website into the _site directory by default:\n\n\nTerminal\n\n# render the website in the project directory\nquarto render",
+    "crumbs": [
+      "Modules",
+      "5) Quarto Websites I"
+    ]
+  },
+  {
+    "objectID": "modules/mod05-quarto-website1.html#website-navigation",
+    "href": "modules/mod05-quarto-website1.html#website-navigation",
+    "title": "5) Quarto Websites I",
+    "section": "Website Navigation",
+    "text": "Website Navigation\nTo learn about the various ways to add navigation to a website, including top-level navigation bars, sidebars, or hybrid designs that uses both, see the following link:\nhttps://quarto.org/docs/websites/website-navigation.html\n\nTop Navigation\nYou can use a top navigation (a navbar) with optional sub-menus.\nhttps://quarto.org/docs/websites/website-navigation.html#top-navigation\nTo add top-navigation to a website, add a navbar entry to the website config in _quarto.yml. For example, the following YAML:\nwebsite:\n  navbar:\n    background: primary\n    search: true\n    left:\n      - text: \"Home\"\n        href: index.qmd\n      - talks.qmd\n      - about.qmd \n\n\nSide Navigation\nIf your site consists of more than a handful of documents, you might prefer to use side navigation, which enables you to display an arbitrarily deep hierarchy of articles.\nwebsite:\n  sidebar:\n    style: \"docked\"\n    search: true\n    contents:\n      - text: \"Introduction\"\n        href: introduction.qmd\n      - section: \"Tropical Cyclones\"\n        contents:\n          - tropical-cyclones1.qmd\n          - tropical-cyclones2.qmd\n      - section: \"Data\"\n        contents:\n          - ibtracs1.qmd\n          - ibtracs2.qmd\n      - section: \"Analysis\"\n        contents:\n          - analysis1.qmd\n          - analysis2.qmd\n      - acknowlegment.qmd",
+    "crumbs": [
+      "Modules",
+      "5) Quarto Websites I"
+    ]
+  },
+  {
+    "objectID": "modules/mod05-quarto-website1.html#activities",
+    "href": "modules/mod05-quarto-website1.html#activities",
+    "title": "5) Quarto Websites I",
+    "section": "Activities",
+    "text": "Activities\n\nCreate a Quarto Website (using default settings)\n\nInspect the content of the website\n\nExamples of websites:\n\nPersonal (landing page)\nBlog\nBook\nProject\n\nCreate another basic website: e.g. minimalist project version\n\nAdd files\nAdd code\nAdd images\n\nNavigation options:\n\nTop Navigation\nSide Navigation\nTop-and-Side Navigation",
+    "crumbs": [
+      "Modules",
+      "5) Quarto Websites I"
+    ]
+  },
+  {
+    "objectID": "modules/mod06-quarto-website2.html",
+    "href": "modules/mod06-quarto-website2.html",
+    "title": "6) Quarto Websites II",
+    "section": "",
+    "text": "In this module we continue describing more elements and uses of Quarto websites.",
+    "crumbs": [
+      "Modules",
+      "6) Quarto Websites II"
+    ]
+  },
+  {
+    "objectID": "modules/mod06-quarto-website2.html#creating-a-personal-website",
+    "href": "modules/mod06-quarto-website2.html#creating-a-personal-website",
+    "title": "6) Quarto Websites II",
+    "section": "Creating a Personal Website",
+    "text": "Creating a Personal Website\nReminder: documentation about Quarto Websites is available in the followin link\nhttps://quarto.org/docs/websites/\nI want authors to have their own personal website. One option to have this type of website is by using a Quarto Website. To be more precise: it would be nice to have a so-called personal landing page.\n\nContent\nThe content of a personal website does not have to be extensive. In fact, it can be composed by a top navigation (navbar) menu with tabs:\n\nHome\nResume\nAbout\n\n\nHome\nThis is the landing page. It is a welcome page to tell the audience who you are, and what you do. I recommend using this page as the gallery to your personal portfolio of projects or creations.\n\n\nResume\nYou can have a dedicated tab for your resume, and possibly link it to your LinkedIn profile.\n\n\nAbout\nThis is a customary element of personal websites, in which you have a “Bio” page or more information about your career, interests, hobbies, etc.",
+    "crumbs": [
+      "Modules",
+      "6) Quarto Websites II"
+    ]
+  },
+  {
+    "objectID": "modules/mod06-quarto-website2.html#activities",
+    "href": "modules/mod06-quarto-website2.html#activities",
+    "title": "6) Quarto Websites II",
+    "section": "Activities",
+    "text": "Activities\n\nCreate a Quarto Website for your Personal Website\nShow dummy version\nAdd a photo to your landing page\nList some projects or ideas for your portfolio\nDraft your resume in the Resume page\nDraft content for your About page\n\nExample of _quarto.yaml config file for a personal website:\nproject:\n  type: website\n\nwebsite:\n  title: \"First Last\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - about.qmd\n      - resume.qmd\n\nformat:\n  html:\n    theme: zephyr\n    fontsize: 1em\n    css: styles.css\n    toc: true\nSample mock-up personal website:\n\nDemo: https://dataviz.quarto.pub/me/\nCode: https://github.com/gastonstat/quarto-pub-me/tree/main",
+    "crumbs": [
+      "Modules",
+      "6) Quarto Websites II"
+    ]
+  },
+  {
+    "objectID": "modules/mod00-motivation.html",
+    "href": "modules/mod00-motivation.html",
+    "title": "Motivation",
+    "section": "",
+    "text": "If you’ve been following the news about the so-called hurricane season over the last 10 years or so, chances are you’ve encountered headlines about some years being labeled as “above-average seasons”, or “hurricanes becoming stronger”, or even “the need to add a category 6 to the Saffir-Simpson wind scale”.\nBelow is a small sample of headlines about hurricanes (mostly from the 2024 season) that can serve as motivation for our STAT 199 study this semester.",
+    "crumbs": [
+      "Modules",
+      "Motivation"
+    ]
+  },
+  {
+    "objectID": "modules/mod00-motivation.html#news-headlines",
+    "href": "modules/mod00-motivation.html#news-headlines",
+    "title": "Motivation",
+    "section": "News Headlines",
+    "text": "News Headlines\n\nHow climate change is worsening hurricanes\n(The daily, Case Western Reserve University)\n\nAs climate change accelerates, hurricanes are becoming more intense and destructive, bringing heavier rains, stronger winds and devastating storm surges.\n\nhttps://thedaily.case.edu/how-climate-change-is-powering-stronger-hurricanes\n\n\n\n\nHurricanes are becoming so strong a new category may be needed, study says\n(World Economic Forum)\n\nHurricanes may become less frequent but more intense, prompting debate on the need to add a Category 6 to the Saffir-Simpson scale. Researchers are proposing a Category 6 for winds exceeding 309 km/h, citing 5 storms in this rage since 2013.\n\nhttps://www.weforum.org/stories/2024/02/hurricanes-becoming-strong-new-category-6-needed\n\n\n\n\nClimate change is making hurricanes stronger. But it’s unclear if it’s resulting in more of them\n(World Economic Forum)\n\nResearchers now expect more hurricanes to become major storms. But it is unclear how climate change may influence the total number of hurricanes emerging.\n\nhttps://www.weforum.org/stories/2022/10/climate-change-impact-tropical-storms\n\n\n\n\nDangerous hurricanes are being made even worse because of climate change, study finds\n(ABC News)\n\nA vast majority of hurricanes between 2019 and 2023 measured stronger winds. According to a study from Climate Central, 84% of Atlantic hurricanes between 2019 and 2023 were, on average, 18 mph stronger because of climate change.\n\nhttps://abcnews.go.com/US/dangerous-hurricanes-made-worse-climate-change-study-finds/story?id=116049116\n\n\n\n\nHow unusual has this hurricane season (2024) been?\n(BBC)\n\nIn less than two weeks, five hurricanes formed, which is not far off what the Atlantic would typically get in an entire year.\n\nhttps://www.bbc.com/news/articles/cden551l7kko\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre hurricanes getting worse? Here’s what you need to know\n(Oregon Public Broadcasting)\n\nClimate change has not led to an increase in the total number of hurricanes hitting the U.S. each year. But the storms that do form are more likely to become more intense, with higher wind speeds, heavier rainfall, and more severe storm surge.\n\nAre hurricanes getting worse? Here’s what you need to know",
+    "crumbs": [
+      "Modules",
+      "Motivation"
+    ]
+  }
+]
