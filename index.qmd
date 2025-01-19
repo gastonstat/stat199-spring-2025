@@ -24,7 +24,7 @@ Tentative calendar subject to change.
 |  3/26   | _Spring Recess_ | | 
 |  4/02   | 9) Animations              | log 9    |
 |  4/09   | 10) Shiny App       | log 10   |
-|  4/16   | 11) TBA             | log 11   |
-|  4/23   | 12) TBA             | log 12   |
+|  4/16   | 11) TBD             | log 11   |
+|  4/23   | 12) TBD             | log 12   |
 
 
