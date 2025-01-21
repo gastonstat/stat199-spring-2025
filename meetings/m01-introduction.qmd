@@ -1,0 +1,37 @@
+---
+title: "Meeting 1"
+---
+
+Monday Jan-20-2025
+
+- Went through my _wish list_ of things that we could analyze:
+    + frequencies of tropical cyclones
+    + maps of tracks (all tracks in the analyzed period)
+    + world map with tracks (all tracks in the analyzed period)
+    + maps of points of origins and tracks
+
+- Questions to ask:
+    + Are "tropical cyclones" (TC) becoming more frequent?
+    + Are "tropical depressions" (TD) becoming more frequent?
+    + Are "tropical storms" (TS) becoming more frequent?
+    + Are "tropical cyclones" becoming more frequent?
+    + Are hurricanes becoming stronger?
+    + Has wind speed of hurricanes cat-5 becoming faster?
+    
+- Unanswered Questions:
+    + Which ocean basins to consider (all, some, just one)?
+    + Which years to consider (1980 - onward)?
+    + What exact content to be delivered?
+    
+- Define day/time of weekly meetings:
+    + Tue, 4-5:30pm
+    
+
+Activities:
+
+- Review the introductory module
+- Read technical documentation about tropical cyclones
+- Watch some of the videos
+- Prepare file structure
+- Download CSV files (e.g. NA basin)
+- Import data in R and start playing with it
