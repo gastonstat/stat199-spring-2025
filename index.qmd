@@ -11,20 +11,21 @@ This is the companion website for __STAT 199 Supervised Independent Study and Re
 
 Tentative calendar subject to change.
 
-| Date    | Session                                                         | Logs |
+| Date    | Session                                                         | Meetings |
 |---------|-----------------------------------------------------------------|----------|
-|  1/29   | [1) Introduction](modules/mod01-introduction.html)              | log 1    |
-|  2/05   | [2) IBTrACS Data](modules/mod02-data.html)                      | log 2    |
-|  2/12   | [3) EDA Single Basin](modules/mod03-eda-single-basin.html)      | log 3    |
-|  2/19   | [4) Mapping Storm Tracks](modules/mod04-mapping-tracks)         | log 4    |
-|  2/26   | [5) Quarto Websites I](modules/mod05-quarto-website1.html)      | log 5    |
-|  3/05   | [6) Quarto Websites II](modules/mod06-quarto-website2.html)     | log 6    |
-|  3/12   | [7) Closeread Documents I](modules/mod07-closeread-docs1.html)  | log 7    |
-|  3/19   | [8) Closeread Documents II](modules/mod08-closeread-docs2.html) | log 8    |
-|  3/26   | _Spring Recess_ | | 
-|  4/02   | 9) Animations              | log 9    |
-|  4/09   | 10) Shiny App       | log 10   |
-|  4/16   | 11) TBD             | log 11   |
-|  4/23   | 12) TBD             | log 12   |
+|  1/21   | [1) Introduction](modules/mod01-introduction.html)              | [meet 1](meetings/m01-introduction.html) |
+|  1/28   | [2) IBTrACS Data](modules/mod02-data.html)                      | log 2    |
+|  2/05   | [3) EDA Single Basin](modules/mod03-eda-single-basin.html)      | log 3    |
+|  2/12   | [4) Mapping Storm Tracks](modules/mod04-mapping-tracks)         | log 4    |
+|  2/19   | [5) Quarto Websites I](modules/mod05-quarto-website1.html)      | log 5    |
+|  2/26   | [6) Quarto Websites II](modules/mod06-quarto-website2.html)     | log 6    |
+|  3/05   | [7) Closeread Documents I](modules/mod07-closeread-docs1.html)  | log 7    |
+|  3/12   | [8) Closeread Documents II](modules/mod08-closeread-docs2.html) | log 8    |
+|  3/19   | 9) Animations | log 9 | 
+|  3/26   | _Spring Recess_     | |
+|  4/02   | 10) Shiny App       | log 10   |
+|  4/09   | 11) TBD             | log 11   |
+|  4/16   | 12) TBD             | log 12   |
+|  4/23   | 13) TBD             | log 13   |
 
 
