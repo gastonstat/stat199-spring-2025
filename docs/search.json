@@ -138,7 +138,7 @@
     "href": "index.html#spring-2025-calendar",
     "title": "Supervised Independent Study and Research",
     "section": "Spring 2025 Calendar",
-    "text": "Spring 2025 Calendar\nTentative calendar subject to change.\n\n\n\nDate\nSession\nLogs\n\n\n\n\n1/29\n1) Introduction\nlog 1\n\n\n2/05\n2) IBTrACS Data\nlog 2\n\n\n2/12\n3) EDA Single Basin\nlog 3\n\n\n2/19\n4) Mapping Storm Tracks\nlog 4\n\n\n2/26\n5) Quarto Websites I\nlog 5\n\n\n3/05\n6) Quarto Websites II\nlog 6\n\n\n3/12\n7) Closeread Documents I\nlog 7\n\n\n3/19\n8) Closeread Documents II\nlog 8\n\n\n3/26\nSpring Recess\n\n\n\n4/02\n9) Animations\nlog 9\n\n\n4/09\n10) Shiny App\nlog 10\n\n\n4/16\n11) TBA\nlog 11\n\n\n4/23\n12) TBA\nlog 12",
+    "text": "Spring 2025 Calendar\nTentative calendar subject to change.\n\n\n\nDate\nSession\nMeetings\n\n\n\n\n1/21\n1) Introduction\nmeet 1\n\n\n1/28\n2) IBTrACS Data\nlog 2\n\n\n2/05\n3) EDA Single Basin\nlog 3\n\n\n2/12\n4) Mapping Storm Tracks\nlog 4\n\n\n2/19\n5) Quarto Websites I\nlog 5\n\n\n2/26\n6) Quarto Websites II\nlog 6\n\n\n3/05\n7) Closeread Documents I\nlog 7\n\n\n3/12\n8) Closeread Documents II\nlog 8\n\n\n3/19\n9) Animations\nlog 9\n\n\n3/26\nSpring Recess\n\n\n\n4/02\n10) Shiny App\nlog 10\n\n\n4/09\n11) TBD\nlog 11\n\n\n4/16\n12) TBD\nlog 12\n\n\n4/23\n13) TBD\nlog 13",
     "crumbs": [
       "Home"
     ]
@@ -347,5 +347,12 @@
       "Modules",
       "Motivation"
     ]
+  },
+  {
+    "objectID": "meetings/m01-introduction.html",
+    "href": "meetings/m01-introduction.html",
+    "title": "Meeting 1",
+    "section": "",
+    "text": "Monday Jan-20-2025\n\nWent through my wish list of things that we could analyze:\n\nfrequencies of tropical cyclones\nmaps of tracks (all tracks in the analyzed period)\nworld map with tracks (all tracks in the analyzed period)\nmaps of points of origins and tracks\n\nQuestions to ask:\n\nAre “tropical cyclones” (TC) becoming more frequent?\nAre “tropical depressions” (TD) becoming more frequent?\nAre “tropical storms” (TS) becoming more frequent?\nAre “tropical cyclones” becoming more frequent?\nAre hurricanes becoming stronger?\nHas wind speed of hurricanes cat-5 becoming faster?\n\nUnanswered Questions:\n\nWhich ocean basins to consider (all, some, just one)?\nWhich years to consider (1980 - onward)?\nWhat exact content to be delivered?\n\nDefine day/time of weekly meetings:\n\nTue, 4-5:30pm\n\n\nActivities:\n\nReview the introductory module\nRead technical documentation about tropical cyclones\nWatch some of the videos\nPrepare file structure\nDownload CSV files (e.g. NA basin)\nImport data in R and start playing with it"
   }
 ]
