@@ -124,26 +124,6 @@
     "text": "Ideas\nShiny app to visualize the storm tracks\nFor instance, say we focus on a particular basin (e.g. North Atlantic):\n\nwidget to choose Season (i.e. Year)\nwidget to filter certain category levels (e.g. depressions, storms, hurricanes, etc)\nwidget to highlight the track sections above a certain wind speed\nwidget to filter month\nwidget to increase size of points or width of line based on wind speed"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Supervised Independent Study and Research",
-    "section": "",
-    "text": "This is the companion website for STAT 199 Supervised Independent Study and Research (Spring 2025) under the supervision of Gaston Sanchez, at UC Berkeley.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#spring-2025-calendar",
-    "href": "index.html#spring-2025-calendar",
-    "title": "Supervised Independent Study and Research",
-    "section": "Spring 2025 Calendar",
-    "text": "Spring 2025 Calendar\nTentative calendar subject to change.\n\n\n\nDate\nSession\nMeetings\n\n\n\n\n1/21\n1) Introduction\nmeet 1\n\n\n1/28\n2) IBTrACS Data\nlog 2\n\n\n2/05\n3) EDA Single Basin\nlog 3\n\n\n2/12\n4) Mapping Storm Tracks\nlog 4\n\n\n2/19\n5) Quarto Websites I\nlog 5\n\n\n2/26\n6) Quarto Websites II\nlog 6\n\n\n3/05\n7) Closeread Documents I\nlog 7\n\n\n3/12\n8) Closeread Documents II\nlog 8\n\n\n3/19\n9) Animations\nlog 9\n\n\n3/26\nSpring Recess\n\n\n\n4/02\n10) Shiny App\nlog 10\n\n\n4/09\n11) TBD\nlog 11\n\n\n4/16\n12) TBD\nlog 12\n\n\n4/23\n13) TBD\nlog 13",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -182,6 +162,33 @@
     "crumbs": [
       "About"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Supervised Independent Study and Research",
+    "section": "",
+    "text": "This is the companion website for STAT 199 Supervised Independent Study and Research (Spring 2025) under the supervision of Gaston Sanchez, at UC Berkeley.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#spring-2025-calendar",
+    "href": "index.html#spring-2025-calendar",
+    "title": "Supervised Independent Study and Research",
+    "section": "Spring 2025 Calendar",
+    "text": "Spring 2025 Calendar\nTentative calendar subject to change.\n\n\n\nDate\nSession\nMeetings\n\n\n\n\n1/21\n1) Introduction\nmeet 1\n\n\n1/28\n2) IBTrACS Data\nlog 2\n\n\n2/05\n3) EDA Single Basin\nlog 3\n\n\n2/12\n4) Mapping Storm Tracks\nlog 4\n\n\n2/19\n5) Quarto Websites I\nlog 5\n\n\n2/26\n6) Quarto Websites II\nlog 6\n\n\n3/05\n7) Closeread Documents I\nlog 7\n\n\n3/12\n8) Closeread Documents II\nlog 8\n\n\n3/19\n9) Animations\nlog 9\n\n\n3/26\nSpring Recess\n\n\n\n4/02\n10) Shiny App\nlog 10\n\n\n4/09\n11) TBD\nlog 11\n\n\n4/16\n12) TBD\nlog 12\n\n\n4/23\n13) TBD\nlog 13",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "meetings/m01-introduction.html",
+    "href": "meetings/m01-introduction.html",
+    "title": "Meeting 1",
+    "section": "",
+    "text": "Monday Jan-20-2025\n\nWent through my wish list of things that we could analyze:\n\nfrequencies of tropical cyclones\nmaps of tracks (all tracks in the analyzed period)\nworld map with tracks (all tracks in the analyzed period)\nmaps of points of origins and tracks\n\nQuestions to ask:\n\nAre “tropical cyclones” (TC) becoming more frequent?\nAre “tropical depressions” (TD) becoming more frequent?\nAre “tropical storms” (TS) becoming more frequent?\nAre “tropical cyclones” becoming more frequent?\nAre hurricanes becoming stronger?\nHas wind speed of hurricanes cat-5 becoming faster?\n\nUnanswered Questions:\n\nWhich ocean basins to consider (all, some, just one)?\nWhich years to consider (1980 - onward)?\nWhat exact content to be delivered?\n\nDefine day/time of weekly meetings:\n\nTue, 4-5:30pm\n\n\nActivities:\n\nReview the introductory module\nRead technical documentation about tropical cyclones\nWatch some of the videos\nPrepare file structure\nDownload CSV files (e.g. NA basin)\nImport data in R and start playing with it"
   },
   {
     "objectID": "modules/mod03-eda-single-basin.html",
@@ -294,6 +301,17 @@
     ]
   },
   {
+    "objectID": "modules/mod05-quarto-website1.html#nice-resources",
+    "href": "modules/mod05-quarto-website1.html#nice-resources",
+    "title": "5) Quarto Websites I",
+    "section": "Nice Resources",
+    "text": "Nice Resources\nCreating your personal website using Quarto (by Sam Csik)\nhttps://ucsb-meds.github.io/creating-quarto-websites/\nCustomizing Quarto Websites (by Sam Csik)\nhttps://ucsb-meds.github.io/customizing-quarto-websites",
+    "crumbs": [
+      "Modules",
+      "5) Quarto Websites I"
+    ]
+  },
+  {
     "objectID": "modules/mod06-quarto-website2.html",
     "href": "modules/mod06-quarto-website2.html",
     "title": "6) Quarto Websites II",
@@ -327,6 +345,17 @@
     ]
   },
   {
+    "objectID": "modules/mod06-quarto-website2.html#nice-resources",
+    "href": "modules/mod06-quarto-website2.html#nice-resources",
+    "title": "6) Quarto Websites II",
+    "section": "Nice Resources",
+    "text": "Nice Resources\nCustomizing Quarto Websites (by Sam Csik)\nhttps://ucsb-meds.github.io/customizing-quarto-websites",
+    "crumbs": [
+      "Modules",
+      "6) Quarto Websites II"
+    ]
+  },
+  {
     "objectID": "modules/mod00-motivation.html",
     "href": "modules/mod00-motivation.html",
     "title": "Motivation",
@@ -347,12 +376,5 @@
       "Modules",
       "Motivation"
     ]
-  },
-  {
-    "objectID": "meetings/m01-introduction.html",
-    "href": "meetings/m01-introduction.html",
-    "title": "Meeting 1",
-    "section": "",
-    "text": "Monday Jan-20-2025\n\nWent through my wish list of things that we could analyze:\n\nfrequencies of tropical cyclones\nmaps of tracks (all tracks in the analyzed period)\nworld map with tracks (all tracks in the analyzed period)\nmaps of points of origins and tracks\n\nQuestions to ask:\n\nAre “tropical cyclones” (TC) becoming more frequent?\nAre “tropical depressions” (TD) becoming more frequent?\nAre “tropical storms” (TS) becoming more frequent?\nAre “tropical cyclones” becoming more frequent?\nAre hurricanes becoming stronger?\nHas wind speed of hurricanes cat-5 becoming faster?\n\nUnanswered Questions:\n\nWhich ocean basins to consider (all, some, just one)?\nWhich years to consider (1980 - onward)?\nWhat exact content to be delivered?\n\nDefine day/time of weekly meetings:\n\nTue, 4-5:30pm\n\n\nActivities:\n\nReview the introductory module\nRead technical documentation about tropical cyclones\nWatch some of the videos\nPrepare file structure\nDownload CSV files (e.g. NA basin)\nImport data in R and start playing with it"
   }
 ]
