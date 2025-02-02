@@ -86,3 +86,10 @@ Sample mock-up personal website:
 
 - Code: <https://github.com/gastonstat/quarto-pub-me/tree/main>
 
+
+## Nice Resources
+
+Customizing Quarto Websites (by Sam Csik)
+
+<a href="https://ucsb-meds.github.io/customizing-quarto-websites" target="_blank">https://ucsb-meds.github.io/customizing-quarto-websites</a>
+

@@ -22,7 +22,7 @@ The goal of this module is to provide a brief introduction to Quarto Websites. M
 
 Quarto Websites are a convenient way to publish the work done in this project.
 
-<https://quarto.org/docs/websites/>
+<a href="https://quarto.org/docs/websites/" target="_blank">https://quarto.org/docs/websites/</a>
 
 
 ### Quick Start
@@ -30,7 +30,7 @@ Quarto Websites are a convenient way to publish the work done in this project.
 To create the website we'll use a website project within RStudio. Follow the
 Quick Start below to read about this topic.
 
-<https://quarto.org/docs/websites/#quick-start>
+<a href="https://quarto.org/docs/websites/#quick-start" target="_blank">https://quarto.org/docs/websites/#quick-start</a>
 
 
 ### Main Workflow
@@ -80,14 +80,14 @@ quarto render
 
 To learn about the various ways to add navigation to a website, including top-level navigation bars, sidebars, or hybrid designs that uses both, see the following link:
 
-<https://quarto.org/docs/websites/website-navigation.html>
+<a href="https://quarto.org/docs/websites/website-navigation.html" target="_blank">https://quarto.org/docs/websites/website-navigation.html</a>
 
 
 ### Top Navigation
 
 You can use a top navigation (a navbar) with optional sub-menus.
 
-<https://quarto.org/docs/websites/website-navigation.html#top-navigation>
+<a href="https://quarto.org/docs/websites/website-navigation.html#top-navigation" target="_blank">https://quarto.org/docs/websites/website-navigation.html#top-navigation</a>
 
 To add top-navigation to a website, add a `navbar` entry to the website config in 
 `_quarto.yml`. For example, the following YAML:
@@ -151,4 +151,15 @@ website:
     + Side Navigation
     + Top-and-Side Navigation
 
+
+
+## Nice Resources
+
+Creating your personal website using Quarto (by Sam Csik)
+
+<a href="https://ucsb-meds.github.io/creating-quarto-websites/" target="_blank">https://ucsb-meds.github.io/creating-quarto-websites/</a>
+
+Customizing Quarto Websites (by Sam Csik)
+
+<a href="https://ucsb-meds.github.io/customizing-quarto-websites" target="_blank">https://ucsb-meds.github.io/customizing-quarto-websites</a>
 
